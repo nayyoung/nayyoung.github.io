@@ -1,0 +1,303 @@
+@import "bourbon"
+$accent: #675B66
+$bgcolor: #A3B8A7
+$bgcolor2: white
+
+header 
+  height: 450px,
+  background: url(http://gdurl.com/AmLv) center center,
+  background-size: cover,
+
+#headerNav 
+  float: right,
+  margin: 30px 30px 0 0,
+  a 
+    display: inline-block,
+    margin-left: 20px,
+    color: white,
+    font-weight: 700,
+    font-size: 18px,
+    text-decoration: none,
+    
+
+    &:hover
+      color: rgba(0,0,0,1)
+
+.btn
+  background: none,
+  padding: 12px 22px,
+
+h1
+  text-align: center,
+  font-size: 50px,
+  font-weight: 700,
+  color: white,
+  clear: both,
+  padding-top: 100px,
+  
+  span
+    display: inline-block,
+    padding: 10px,
+    border: white solid 10px,
+  
+.tagline
+  text-align: center,
+  color: white,
+  font-weight: 700,
+h3
+  color: $accent,
+  font-weight: 700,
+  font-size: 18px,
+  text-align: center,
+  padding: 100px 0 30px,
+
+#about-me
+  background: $bgcolor2,
+
+.faceLockup
+  max-width: 720px,
+  background: $bgcolor2,
+  margin: 0 auto,
+  +display(flex)
+  +align-items(center)
+
+
+.faceImg
+  width: 200px,
+  height: auto,
+  order: 3,
+  display: block,
+  margin-left: auto,
+  margin-right: auto ,
+
+[class^='icon']
+  +size(100px)
+  background: $bgcolor,
+  border-radius: 50%,
+  margin-left: auto,
+  margin-right: auto,
+
+  path
+    fill: $accent,
+
+  &.iconPencil
+    order: 1,
+  &.iconMouse
+    order: 2,
+  &.iconBrowser
+    order: 4,
+  &.iconVideo
+    order: 5,
+
+.blurb
+  max-width: 620px,
+  padding: 0 15px,
+  margin: 50px auto,
+  text-align: center,
+#blurb
+  font-size: 24px,
+  font-weight: 300,
+
+@media screen and (max-width: 650px)
+  .faceLockup
+    display: block,
+    text-align: center,
+    div
+      display: inline-block,
+    .faceImg
+      display: block,
+      background-position: center center,
+      background-repeat: no repeat,
+      width: 200px,
+      margin-bottom: 30px,
+    [class^='icon']
+      margin: 10px,
+  
+.skillLockup
+  max-width: 700px,
+  margin: 100px auto,
+  color: #999,
+  +clearfix
+
+  .skillUnit
+    width: 350px,
+    float: left,
+  .skillIcons
+    font-size: 0,
+    margin-bottom: 30px,
+    span
+      display: inline-block,
+      +size(14px)
+      background-color: $accent,
+      margin-right: 2px,
+      border-radius: 50%,
+  
+      &:after
+        content: '',
+        display: block,
+        +size(10px)
+        background: #fff,
+        border-radius: 50%,
+        margin: 2px,
+    //&.skill-8 span:nth-child(n+9)
+      background: $bgcolor,
+    @for $i from 1 through 10
+      &.skill-#{$i} span:nth-child(n+#{$i+1})
+        background: $bgcolor,
+@media screen and (max-width: 541px)
+  .skillLockup
+    width: 270px,
+  
+.alt-section
+  background: $bgcolor,
+
+.thumb-container
+  max-width: 960px,
+  margin: 0px auto,
+  padding: 100px,
+  +clearfix
+
+.thumb-unit
+  display: block,
+  width: 25%,
+  float: left,
+  position: relative,
+  padding-top: 25%,
+  overflow: hidden,
+  
+  .thumb-overlay
+    +position(absolute, 100% 0px null 0px)
+    height: 100%,
+    background: fade-out($accent, 0.5)
+    text-align: center,
+    +transition
+    
+    strong
+      display: block,
+      padding: 20px, 
+      color: white,
+      font-weight: 300,
+      font-size: 20px,
+      line-height: 1.2,
+ 
+  &:hover .thumb-overlay
+    +position(absolute, 0% 0px null 0px)
+  
+.breaking-bad
+  background-image: url(https://images8.alphacoders.com/435/435951.jpg),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+
+.weather
+  background-image: url(http://widgetweather.net/PressKit/1.2/widget_weather_icon.png),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+
+.wikipedia
+  background-image: url(http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Wikipedia-alt-1-Metro-icon.png),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+
+.twitch
+  background-image: url(https://lh3.googleusercontent.com/Ti7DQ5NH92V-_uuOiTbMOMwAjVXzl2rubjygxQp3KGutzuRHnjYvpCtfWJybeDYh4g=w300),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+
+.calculator
+  background-image: url(http://a5.mzstatic.com/us/r30/Purple71/v4/6d/ef/61/6def6136-a156-451d-e60a-c7d06e75176d/icon175x175.png),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+
+.clock
+  background-image: url(https://store-images.microsoft.com/image/apps.54747.9007199266527745.240aeec7-58d8-487c-8846-431eb0aee0ca.b4c4f068-c52a-454b-b7c7-7977be218861?w=180&h=180&q=60),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+
+.tic-tac-toe
+  background-image: url(http://a5.mzstatic.com/us/r30/Purple7/v4/4f/e5/f3/4fe5f367-d0cd-7975-1818-58086300d757/icon175x175.jpeg),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+
+.simon
+  background-image: url(https://jeffcolibrary.org/sites/default/files/styles/square_thumbnail/public/Simon.png?itok=1-mPg6ML),
+  background-position: center center,
+  background-repeat: no-repeat,
+  background-size: cover,
+  
+  
+.section-contact
+  background-color: $bgcolor2,
+  +clearfix
+  
+
+.social-links
+  max-width: 700px,
+  margin: 0px auto 50px,
+  background-color: $bgcolor2,
+  +display(flex)
+  +justify-content(space-around)
+    
+  a
+    display: block,
+    background: white,
+    +size(50px)
+    text-align: center,
+    line-height: height,
+    text-decoration: none,
+    +transition
+    
+    &:hover
+      +transform(scale(1.2))
+  
+.bar
+  width: 250px,
+  height: 0px,
+  border-top: 4px solid $accent,
+  margin: 0px auto 50px,
+
+.biglink
+  display: block,
+  margin: 0px auto 50px,
+  text-align: center,
+  font-size: 60px,
+  font-weight: 300,
+  line-height: 1,
+  color: $accent,
+  +transition()
+  text-decoration: none,
+  
+  &:hover
+    color: $accent,
+    +transform(scale(1.1)) 
+
+footer
+  +clearfix
+  height: 150px,
+  background: url(http://gdurl.com/AmLv) center center,
+  background-size: cover,
+#footerNav  
+  //float: right,
+  margin: 30px 30px 0 0,
+  padding: 60px 20px,
+  a 
+    display: inline-block,
+    margin-left: 15px,
+    color: white,
+    font-weight: 700,
+    font-size: 14px,
+    text-decoration: none,
+    
+    &:hover
+      color: rgba(0,0,0,1)
+    
+
+
+
+  
